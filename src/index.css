@@ -1,0 +1,97 @@
+/* Import Inter font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Global Styles */
+body {
+  background-color: #f9fafb;
+  font-family: "Inter", "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #121906;
+  letter-spacing: -0.02em;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ea454c;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #549ec4;
+}
+
+/* Smooth Transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Responsive Typography */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Focus States */
+*:focus {
+  outline: 2px solid #549ec4;
+  outline-offset: 2px;
+}
+
+/* Subtle Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Form and Input Enhancements */
+input,
+textarea,
+select {
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Container Padding */
+.MuiContainer-root {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* Card Hover Effect */
+.MuiCard-root {
+  will-change: transform, box-shadow;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: white;
+  }
+}
