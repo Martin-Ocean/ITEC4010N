@@ -11,6 +11,7 @@ module.exports = {
     filename: "[name].[contenthash].js",
     chunkFilename: "[name].[contenthash].js", // Allows dynamic chunk naming
     clean: true,
+    publicPath: "/ITEC4010N/",
   },
   // mode: "production",
   optimization: {
@@ -60,6 +61,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+      publicPath: "/ITEC4010N/",
       minify: {
         removeComments: true,
         collapseWhitespace: true,

@@ -13,7 +13,7 @@ seedDatabase(); // Run only if needed
 const root = createRoot(document.getElementById("root"));
 root.render(
   <ThemeProvider theme={theme}>
-    <Router>
+    <Router basename="/ITEC4010N">
       <App />
     </Router>
   </ThemeProvider>
