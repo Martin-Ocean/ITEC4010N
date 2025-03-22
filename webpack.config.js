@@ -7,13 +7,13 @@ const BrotliPlugin = require("brotli-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build"),
     filename: "[name].[contenthash].js",
     chunkFilename: "[name].[contenthash].js", // Allows dynamic chunk naming
     clean: true,
     publicPath: "/ITEC4010N/",
   },
-  // mode: "production",
+  mode: "production",
   optimization: {
     splitChunks: {
       chunks: "all",
@@ -89,7 +89,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: path.join(__dirname, "dist"),
+    static: path.join(__dirname, "build"),
     compress: true,
     hot: true,
     historyApiFallback: true,
