@@ -69,14 +69,17 @@ const InformationForm = ({ setAuthenticated }) => {
 
     try {
       const axios = (await import("axios")).default;
-      const response = await axios.post("http://localhost:3000/generate-plan", {
-        userInfo: formData,
-        fitnessGoals: { primary_goal: formData.primary_goal },
-        dietPreferences: {},
-        healthConsiderations: {},
-        trackingPreferences: {},
-        aiPersonalization: {},
-      });
+      const response = await axios.post(
+        "https://us-central1-itec4010n.cloudfunctions.net/generateFitnessPlan",
+        {
+          userInfo: formData,
+          fitnessGoals: { primary_goal: formData.primary_goal },
+          dietPreferences: {},
+          healthConsiderations: {},
+          trackingPreferences: {},
+          aiPersonalization: {},
+        }
+      );
 
       setAiResponse(
         response.data.choices[0]?.message?.content || "No response"
